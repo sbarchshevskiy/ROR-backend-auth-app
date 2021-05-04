@@ -108,3 +108,14 @@ Started GET "/sessions" for ::1 at 2021-05-03 13:48:52 -0400
   
 ActionController::RoutingError (No route matches [GET] "/sessions"):
   
+Started GET "/" for ::1 at 2021-05-04 15:07:59 -0400
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticController#home as HTML
+Completed 200 OK in 8ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 1359)
+
+
+Started GET "/" for ::1 at 2021-05-04 15:08:00 -0400
+Processing by StaticController#home as HTML
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 221)
+
+
