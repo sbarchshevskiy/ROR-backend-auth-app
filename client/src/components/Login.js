@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
-export default class Register extends Component{
+export default class Login extends Component{
 
   constructor(props) {
     super(props);
@@ -9,8 +9,7 @@ export default class Register extends Component{
     this.state = {
       email: "",
       password: "",
-      password_confirmation: "",
-      registerErrors: ""
+      loginErrors: ""
     }
 
     this.handleSubmit = this.handleSubmit.bind(this)
@@ -19,28 +18,25 @@ export default class Register extends Component{
   }
 
   handleSubmit(event){
-
     const {
       email,
       password,
-      password_confirmation
     } = this.state;
 
 
-    axios.post("http://localhost:3001/registrations", {
-      user: {
-        email: email,
-        password: password,
-        password_confirmation: password_confirmation
-      }
-    },
+    axios.post("http://localhost:3001/sessions", {
+        user: {
+          email: email,
+          password: password,
+        }
+      },
       {withCredentials: true}
-      ).then(res => {
-        if (res.data.status === 200 || 'created')
+    ).then(res => {
+      if (res.data.status === 200)
         this.props.credentialSuccess(res.data)
-      console.log("resister success:", res);
+      console.log("login success:", res);
     }).catch(err => {
-      console.log("error registering", err)
+      console.log("error logging in", err)
     })
     event.preventDefault();
   }
@@ -72,15 +68,7 @@ export default class Register extends Component{
                  required
           />
 
-          <input type="password"
-                 name="password_confirmation"
-                 value={this.state.password_confirmation}
-                 placeholder="password_confirmation"
-                 onChange={this.handleChange}
-                 required
-          />
-
-          <button type="submit">submit</button>
+          <button type="submit">login</button>
         </form>
       </div>
     )

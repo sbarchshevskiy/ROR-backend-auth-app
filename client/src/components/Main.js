@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Register from "./Register";
+import Login from "./Login";
 
 export default class Main extends Component {
   constructor(props) {
@@ -15,10 +16,11 @@ export default class Main extends Component {
   }
 
   render() {
-    return(
+    return (
       <div>
         <h1>{this.props.sessionStatus}</h1>
         <Register credentialSuccess={this.credentialSuccess}/>
+        <Login credentialSuccess={this.credentialSuccess}/>
       </div>
     )
   }
