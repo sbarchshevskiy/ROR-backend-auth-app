@@ -36,6 +36,8 @@ export default class Register extends Component{
     },
       {withCredentials: true}
       ).then(res => {
+        if (res.data.status === 200 || 'created')
+        this.props.credentialSuccess(res.data)
       console.log("resister success:", res);
     }).catch(err => {
       console.log("error", err)
