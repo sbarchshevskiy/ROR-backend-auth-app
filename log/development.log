@@ -125,3 +125,125 @@ Processing by StaticController#home as HTML
 Completed 200 OK in 7ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 1359)
 
 
+Started POST "/registrations" for 127.0.0.1 at 2021-05-05 12:05:29 -0400
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+SyntaxError (/Users/rocket/Desktop/dev/rail_project/app/controllers/registrations_controller.rb:12: syntax error, unexpected local variable or method, expecting '}'
+        user: user
+        ^~~~
+):
+  
+app/controllers/registrations_controller.rb:12: syntax error, unexpected local variable or method, expecting '}'
+app/controllers/registrations_controller.rb:12: syntax error, unexpected local variable or method, expecting '}'
+app/controllers/registrations_controller.rb:12: syntax error, unexpected local variable or method, expecting '}'
+Started GET "/registrations" for 127.0.0.1 at 2021-05-05 12:12:57 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/registrations"):
+  
+Started POST "/registrations" for 127.0.0.1 at 2021-05-05 12:20:33 -0400
+  
+SyntaxError (/Users/rocket/Desktop/dev/rail_project/app/controllers/registrations_controller.rb:12: syntax error, unexpected local variable or method, expecting '}'
+        user: user
+        ^~~~
+):
+  
+app/controllers/registrations_controller.rb:12: syntax error, unexpected local variable or method, expecting '}'
+app/controllers/registrations_controller.rb:12: syntax error, unexpected local variable or method, expecting '}'
+app/controllers/registrations_controller.rb:12: syntax error, unexpected local variable or method, expecting '}'
+Started POST "/registrations" for 127.0.0.1 at 2021-05-05 12:21:32 -0400
+  
+SyntaxError (/Users/rocket/Desktop/dev/rail_project/app/controllers/registrations_controller.rb:12: syntax error, unexpected local variable or method, expecting '}'
+        user: user
+        ^~~~
+):
+  
+app/controllers/registrations_controller.rb:12: syntax error, unexpected local variable or method, expecting '}'
+app/controllers/registrations_controller.rb:12: syntax error, unexpected local variable or method, expecting '}'
+app/controllers/registrations_controller.rb:12: syntax error, unexpected local variable or method, expecting '}'
+Started POST "/registrations" for 127.0.0.1 at 2021-05-05 12:23:53 -0400
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+SyntaxError (/Users/rocket/Desktop/dev/rail_project/app/controllers/registrations_controller.rb:12: syntax error, unexpected local variable or method, expecting '}'
+        user: user
+        ^~~~
+):
+  
+app/controllers/registrations_controller.rb:12: syntax error, unexpected local variable or method, expecting '}'
+app/controllers/registrations_controller.rb:12: syntax error, unexpected local variable or method, expecting '}'
+app/controllers/registrations_controller.rb:12: syntax error, unexpected local variable or method, expecting '}'
+Started POST "/registrations" for 127.0.0.1 at 2021-05-05 12:29:45 -0400
+Processing by RegistrationsController#create as HTML
+  Parameters: {"user"=>{"email"=>"sergey@sergey.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "registration"=>{"user"=>{"email"=>"sergey@sergey.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}}
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/registrations_controller.rb:3:in `create'
+  [1m[36mUser Exists? (2.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "sergey@sergey.com"], ["LIMIT", 1]]
+  ↳ app/controllers/registrations_controller.rb:3:in `create'
+  [1m[36mUser Create (1.0ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "sergey@sergey.com"], ["password_digest", "$2a$12$JOhVB68NB4bH9dTQ2m/a2uaBsAze4ao4WaIqzJc4ep6xK1pyrztKq"], ["created_at", "2021-05-05 16:29:45.954893"], ["updated_at", "2021-05-05 16:29:45.954893"]]
+  ↳ app/controllers/registrations_controller.rb:3:in `create'
+  [1m[36mTRANSACTION (2.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/registrations_controller.rb:3:in `create'
+Completed 200 OK in 298ms (Views: 0.2ms | ActiveRecord: 16.4ms | Allocations: 9968)
+
+
+Started POST "/registrations" for 127.0.0.1 at 2021-05-05 12:30:38 -0400
+  
+SyntaxError (/Users/rocket/Desktop/dev/rail_project/app/controllers/registrations_controller.rb:12: syntax error, unexpected local variable or method, expecting '}'
+        user: :user
+        ^~~~
+/Users/rocket/Desktop/dev/rail_project/app/controllers/registrations_controller.rb:13: syntax error, unexpected '}', expecting `end'
+      }
+      ^
+):
+  
+app/controllers/registrations_controller.rb:12: syntax error, unexpected local variable or method, expecting '}'
+app/controllers/registrations_controller.rb:13: syntax error, unexpected '}', expecting `end'
+app/controllers/registrations_controller.rb:12: syntax error, unexpected local variable or method, expecting '}'
+app/controllers/registrations_controller.rb:13: syntax error, unexpected '}', expecting `end'
+app/controllers/registrations_controller.rb:12: syntax error, unexpected local variable or method, expecting '}'
+app/controllers/registrations_controller.rb:13: syntax error, unexpected '}', expecting `end'
+Started POST "/registrations" for 127.0.0.1 at 2021-05-05 12:31:30 -0400
+  
+SyntaxError (/Users/rocket/Desktop/dev/rail_project/app/controllers/registrations_controller.rb:12: syntax error, unexpected local variable or method, expecting '}'
+        user: :user
+        ^~~~
+/Users/rocket/Desktop/dev/rail_project/app/controllers/registrations_controller.rb:13: syntax error, unexpected '}', expecting `end'
+      }
+      ^
+):
+  
+app/controllers/registrations_controller.rb:12: syntax error, unexpected local variable or method, expecting '}'
+app/controllers/registrations_controller.rb:13: syntax error, unexpected '}', expecting `end'
+app/controllers/registrations_controller.rb:12: syntax error, unexpected local variable or method, expecting '}'
+app/controllers/registrations_controller.rb:13: syntax error, unexpected '}', expecting `end'
+app/controllers/registrations_controller.rb:12: syntax error, unexpected local variable or method, expecting '}'
+app/controllers/registrations_controller.rb:13: syntax error, unexpected '}', expecting `end'
+Started POST "/registrations" for 127.0.0.1 at 2021-05-05 12:33:51 -0400
+Processing by RegistrationsController#create as HTML
+  Parameters: {"user"=>{"email"=>"sergey@sergey.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "registration"=>{"user"=>{"email"=>"sergey@sergey.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}}
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/registrations_controller.rb:3:in `create'
+  [1m[36mUser Exists? (1.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "sergey@sergey.com"], ["LIMIT", 1]]
+  ↳ app/controllers/registrations_controller.rb:3:in `create'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/registrations_controller.rb:3:in `create'
+Completed 422 Unprocessable Entity in 262ms (ActiveRecord: 8.4ms | Allocations: 10918)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Email has already been taken):
+  
+app/controllers/registrations_controller.rb:3:in `create'
+Started POST "/registrations" for 127.0.0.1 at 2021-05-05 12:35:09 -0400
+Processing by RegistrationsController#create as HTML
+  Parameters: {"user"=>{"email"=>"sergey2@sergey.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "registration"=>{"user"=>{"email"=>"sergey2@sergey.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}}
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/registrations_controller.rb:3:in `create'
+  [1m[36mUser Exists? (1.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "sergey2@sergey.com"], ["LIMIT", 1]]
+  ↳ app/controllers/registrations_controller.rb:3:in `create'
+  [1m[36mUser Create (1.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "sergey2@sergey.com"], ["password_digest", "$2a$12$6iQODtYh9S1WJbiLaRjsBO60RPFAsEIkOv1FWRZbqb5Um/es4oHWe"], ["created_at", "2021-05-05 16:35:09.594683"], ["updated_at", "2021-05-05 16:35:09.594683"]]
+  ↳ app/controllers/registrations_controller.rb:3:in `create'
+  [1m[36mTRANSACTION (5.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/registrations_controller.rb:3:in `create'
+Completed 200 OK in 288ms (Views: 0.2ms | ActiveRecord: 9.0ms | Allocations: 3584)
+
+

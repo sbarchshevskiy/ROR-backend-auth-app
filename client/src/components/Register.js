@@ -27,7 +27,7 @@ export default class Register extends Component{
     } = this.state;
 
 
-    axios.post("https://localhost:3001/registrations", {
+    axios.post("http://localhost:3001/registrations", {
       user: {
         email: email,
         password: password,
@@ -49,8 +49,6 @@ export default class Register extends Component{
     })
     console.log("handle change", event)
   }
-
-
 
   render() {
     return(
